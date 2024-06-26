@@ -1,0 +1,193 @@
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YourNamespace.MainPage">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <!-- Encabezado -->
+                <StackLayout BackgroundColor="#333" Padding="20" VerticalOptions="Center">
+                    <Image Source="img.jpeg" HeightRequest="200" WidthRequest="200" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label Text="Daniela Perales" FontSize="24" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label Text="Puesto ocupado / buscado" FontSize="18" TextColor="White" HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <!-- Sección de Contacto -->
+                <StackLayout Margin="0,20,0,0">
+                    <Label Text="Contacto" FontSize="20" FontAttributes="Bold" Margin="0,10,0,5"/>
+                    <ListView SeparatorVisibility="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Margin="0,5">
+                                        <Label Text="{Binding Icon}" FontFamily="FontAwesome" FontSize="18" VerticalOptions="Center"/>
+                                        <Label Text="{Binding Text}" FontSize="16" VerticalOptions="Center" Margin="10,0,0,0"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        <x:Array Type="{x:Type local:ContactItem}">
+                            <local:ContactItem Icon="&#xf095;" Text="(054) 956979267"/>
+                            <local:ContactItem Icon="&#xf003;" Text="perales82@gmail.com"/>
+                            <local:ContactItem Icon="&#xf0ac;" Text="www.mywebsite.com"/>
+                            <local:ContactItem Icon="&#xf08c;" Text="www.linkedin.com/me"/>
+                            <local:ContactItem Icon="&#xf041;" Text="Arequipa, Perú"/>
+                        </x:Array>
+                    </ListView>
+                </StackLayout>
+
+                <!-- Sección de Idiomas -->
+                <StackLayout Margin="0,20,0,0">
+                    <Label Text="Idiomas" FontSize="20" FontAttributes="Bold" Margin="0,10,0,5"/>
+                    <ListView SeparatorVisibility="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Margin="0,5">
+                                        <Label Text="{Binding Icon}" FontFamily="FontAwesome" FontSize="18" VerticalOptions="Center"/>
+                                        <Label Text="{Binding Text}" FontSize="16" VerticalOptions="Center" Margin="10,0,0,0"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        <x:Array Type="{x:Type local:ListItem}">
+                            <local:ListItem Icon="&#xf111;" Text="Español: Nativo"/>
+                            <local:ListItem Icon="&#xf111;" Text="Inglés: Intermedio(B1)"/>
+                            <!-- Agrega más idiomas según sea necesario -->
+                        </x:Array>
+                    </ListView>
+                </StackLayout>
+
+                <!-- Sección de Aptitudes -->
+                <StackLayout Margin="0,20,0,0">
+                    <Label Text="Aptitudes" FontSize="20" FontAttributes="Bold" Margin="0,10,0,5"/>
+                    <ListView SeparatorVisibility="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Margin="0,5">
+                                        <Label Text="{Binding Icon}" FontFamily="FontAwesome" FontSize="18" VerticalOptions="Center"/>
+                                        <Label Text="{Binding Text}" FontSize="16" VerticalOptions="Center" Margin="10,0,0,0"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        <x:Array Type="{x:Type local:ListItem}">
+                            <local:ListItem Icon="&#xf10c;" Text="Inteligencia emocional"/>
+                            <local:ListItem Icon="&#xf10c;" Text="Espíritu crítico"/>
+                            <local:ListItem Icon="&#xf10c;" Text="Trabajo en equipo"/>
+                            <local:ListItem Icon="&#xf10c;" Text="Capacidad analítica"/>
+                            <local:ListItem Icon="&#xf10c;" Text="Habilidades físicas"/>
+                            <!-- Agrega más aptitudes según sea necesario -->
+                        </x:Array>
+                    </ListView>
+                </StackLayout>
+
+                <!-- Sección de Habilidades -->
+                <StackLayout Margin="0,20,0,0">
+                    <Label Text="Habilidades" FontSize="20" FontAttributes="Bold" Margin="0,10,0,5"/>
+                    <ListView SeparatorVisibility="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Margin="0,5">
+                                        <Label Text="{Binding Icon}" FontFamily="FontAwesome" FontSize="18" VerticalOptions="Center"/>
+                                        <Label Text="{Binding Text}" FontSize="16" VerticalOptions="Center" Margin="10,0,0,0"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        <x:Array Type="{x:Type local:ListItem}">
+                            <local:ListItem Icon="&#xf0b1;" Text="Acondicionamiento físico"/>
+                            <local:ListItem Icon="&#xf0b1;" Text="Capacidad artística"/>
+                            <local:ListItem Icon="&#xf0b1;" Text="Basquet y natación"/>
+                            <!-- Agrega más habilidades según sea necesario -->
+                        </x:Array>
+                    </ListView>
+                </StackLayout>
+
+                <!-- Sección de Otros Intereses -->
+                <StackLayout Margin="0,20,0,0">
+                    <Label Text="Otros intereses" FontSize="20" FontAttributes="Bold" Margin="0,10,0,5"/>
+                    <ListView SeparatorVisibility="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Margin="0,5">
+                                        <Label Text="{Binding Icon}" FontFamily="FontAwesome" FontSize="18" VerticalOptions="Center"/>
+                                        <Label Text="{Binding Text}" FontSize="16" VerticalOptions="Center" Margin="10,0,0,0"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        <x:Array Type="{x:Type local:ListItem}">
+                            <local:ListItem Icon="&#xf10c;" Text="Paseos ecológicos"/>
+                            <local:ListItem Icon="&#xf10c;" Text="Voluntariados"/>
+                            <!-- Agrega más intereses según sea necesario -->
+                        </x:Array>
+                    </ListView>
+                </StackLayout>
+
+                <!-- Sección de Perfil -->
+                <StackLayout Margin="0,20,0,0">
+                    <Label Text="Perfil Profesional" FontSize="20" FontAttributes="Bold" Margin="0,10,0,5"/>
+                    <Label Text="Como licenciada en Ciencia de la Computación con más de cinco años de experiencia, me destaco por desarrollar aplicaciones web y móviles altamente escalables y robustas. Poseo una sólida comprensión de tecnologías como JavaScript, React y Node.js, y una pasión por la resolución de problemas complejos y la mejora continua del producto. Soy una comunicadora efectiva y trabajo bien en equipos multidisciplinarios. Estoy buscando oportunidades desafiantes donde pueda aplicar mis habilidades y contribuir al éxito del equipo." 
+                           FontSize="16" Margin="0,10,0,0"/>
+                </StackLayout>
+
+                <!-- Sección de Experiencia Laboral -->
+                <StackLayout Margin="0,20,0,0">
+                    <Label Text="Experiencia Laboral" FontSize="20" FontAttributes="Bold" Margin="0,10,0,5"/>
+                    <ListView SeparatorVisibility="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Margin="0,5">
+                                        <Label Text="{Binding Title}" FontSize="18" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Company}" FontSize="16"/>
+                                        <Label Text="{Binding Description}" FontSize="16" Margin="0,5,0,0"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        <x:Array Type="{x:Type local:Job}">
+                            <local:Job Title="Desarrollador de Software Junior" Company="ABC Tech">
+                                <local:Job.Description>
+                                    <local:JobDescription>
+                                        <local:JobDescription.Item>Participé en el desarrollo y mantenimiento de aplicaciones web utilizando tecnologías como HTML, CSS, JavaScript y frameworks como AngularJS.</local:JobDescription.Item>
+                                        <local:JobDescription.Item>Colaboré en el diseño e implementación de bases de datos SQL para almacenar y gestionar datos críticos del negocio.</local:JobDescription.Item>
+                                    </local:JobDescription>
+                                </local:Job.Description>
+                            </local:Job>
+                            <local:Job Title="Prácticas en Ingeniería de Software" Company="XYZ Solutions">
+                                <local:Job.Description>
+                                    <local:JobDescription>
+                                        <local:JobDescription.Item>Contribuí al análisis de requisitos de clientes y a la elaboración de especificaciones técnicas para el desarrollo de nuevas funcionalidades.</local:JobDescription.Item>
+                                        <local:JobDescription.Item>Realicé pruebas unitarias y de integración para garantizar el correcto funcionamiento de los módulos desarrollados.</local:JobDescription.Item>
+                                    </local:JobDescription>
+                                </local:Job.Description>
+                            </local:Job>
+                            <local:Job Title="Pasante en Seguridad Informática" Company="DEF Cybersecurity">
+                                <local:Job.Description>
+                                    <local:JobDescription>
+                                        <local:JobDescription.Item>Asistí en la identificación y análisis de vulnerabilidades de seguridad en sistemas informáticos mediante herramientas de escaneo y pruebas de penetración.</local:JobDescription.Item>
+                                    </local:JobDescription>
+                                </local:Job.Description>
+                            </local:Job>
+                        </x:Array>
+                    </ListView>
+                </StackLayout>
+
+                <!-- Sección de Educación -->
+                <StackLayout Margin="0,20,0,0">
+                    <Label Text="Educación" FontSize="20" FontAttributes="Bold" Margin="0,10,0,5"/>
+                    <Label Text="Licenciatura Profesional en Ciencia de la Computación" FontSize="18"/>
+                    <Label Text="Universidad Católica San Pablo, Perú" FontSize="16" Margin="0,5,0,0"/>
+                </StackLayout>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>
